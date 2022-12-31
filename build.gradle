@@ -68,13 +68,13 @@ configure(allprojects) {
 	}
 
 	compileJava {
-		sourceCompatibility = 1.8
-		targetCompatibility = 1.8
+		sourceCompatibility = 17
+		targetCompatibility = 17
 	}
 
 	compileTestJava {
-		sourceCompatibility = 1.8
-		targetCompatibility = 1.8
+		sourceCompatibility = 17
+		targetCompatibility = 17
 	}
 
 	group = 'org.springframework.statemachine'
@@ -259,8 +259,8 @@ project('spring-statemachine-autoconfigure') {
 		implementation 'org.springframework.boot:spring-boot-actuator-autoconfigure'
 		implementation 'org.springframework.boot:spring-boot-actuator'
 		implementation project(':spring-statemachine-data-common:spring-statemachine-data-jpa')
-		implementation project(':spring-statemachine-data-common:spring-statemachine-data-redis')
-		implementation project(':spring-statemachine-data-common:spring-statemachine-data-mongodb')
+//		implementation project(':spring-statemachine-data-common:spring-statemachine-data-redis')
+//		implementation project(':spring-statemachine-data-common:spring-statemachine-data-mongodb')
 		implementation 'org.springframework.boot:spring-boot-autoconfigure-processor'
 		implementation 'io.micrometer:micrometer-core'
 		implementation 'org.eclipse.persistence:javax.persistence'
@@ -320,6 +320,7 @@ project('spring-statemachine-kryo') {
 	}
 }
 
+/*
 project('spring-statemachine-zookeeper') {
 	description = 'Spring State Machine Zookeeper'
 
@@ -347,7 +348,7 @@ project('spring-statemachine-zookeeper') {
 		testRuntimeOnly 'org.apache.logging.log4j:log4j-core'
 	}
 }
-
+*/
 project('spring-statemachine-data-common') {
 	configurations {
 		testArtifacts.extendsFrom testRuntime
@@ -381,7 +382,7 @@ project('spring-statemachine-data-common') {
 		testArtifacts testJar
 	}
 }
-
+/*
 project('spring-statemachine-cluster') {
 	description = 'Spring State Machine Cluster'
 
@@ -407,7 +408,7 @@ project('spring-statemachine-cluster') {
 		testRuntimeOnly 'org.apache.logging.log4j:log4j-core'
 	}
 }
-
+*/
 project('spring-statemachine-uml') {
 	description = 'Spring State Machine Uml'
 
@@ -462,14 +463,14 @@ project('spring-statemachine-build-tests') {
 		testImplementation project(':spring-statemachine-test')
 		testImplementation project(':spring-statemachine-data-common')
 		testImplementation project(':spring-statemachine-data-common:spring-statemachine-data-jpa')
-		testImplementation project(':spring-statemachine-data-common:spring-statemachine-data-redis')
-		testImplementation project(':spring-statemachine-data-common:spring-statemachine-data-mongodb')
+//		testImplementation project(':spring-statemachine-data-common:spring-statemachine-data-redis')
+//		testImplementation project(':spring-statemachine-data-common:spring-statemachine-data-mongodb')
 		testImplementation project(path:':spring-statemachine-core', configuration:'testArtifacts')
 		testImplementation "io.projectreactor.tools:blockhound:$reactorBlockHoundVersion"
 		testImplementation 'io.projectreactor:reactor-test'
 		testImplementation 'org.apache.commons:commons-pool2'
-		testImplementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
-		testImplementation 'org.springframework.boot:spring-boot-starter-data-redis'
+		//testImplementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+		//testImplementation 'org.springframework.boot:spring-boot-starter-data-redis'
 		testImplementation 'redis.clients:jedis'
 		testImplementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 		testImplementation 'com.h2database:h2'
@@ -477,6 +478,8 @@ project('spring-statemachine-build-tests') {
 		testImplementation 'org.springframework.boot:spring-boot-starter'
 		testImplementation 'org.springframework.boot:spring-boot-starter-test'
 		testImplementation 'org.springframework:spring-test'
+		testImplementation 'com.fasterxml.jackson.core:jackson-core'
+		testImplementation 'com.fasterxml.jackson.core:jackson-databind'
 	}
 }
 
@@ -583,8 +586,8 @@ project('spring-statemachine-starter') {
 configure(sampleProjects()) {
 	apply plugin: 'org.springframework.boot'
 	compileJava {
-		sourceCompatibility = 1.8
-		targetCompatibility = 1.8
+		sourceCompatibility = 17
+		targetCompatibility = 17
 	}
 	dependencies {
 		implementation project(':spring-statemachine-core')

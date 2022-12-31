@@ -22,7 +22,7 @@ project('spring-statemachine-data-jpa') {
 		testRuntimeOnly 'org.springframework.boot:spring-boot-starter-web'
 	}
 }
-
+/*
 project('spring-statemachine-data-redis') {
 	description = 'Spring State Machine Data Redis'
 	dependencies {
@@ -67,3 +67,4 @@ project('spring-statemachine-data-mongodb') {
 		testRuntimeOnly 'org.springframework.boot:spring-boot-starter-web'
 	}
 }
+*/

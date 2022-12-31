@@ -80,7 +80,7 @@ project('spring-statemachine-samples-washer') {
 		testImplementation 'org.assertj:assertj-core'
 	}
 }
-
+/*
 project('spring-statemachine-samples-zookeeper') {
 	description = 'Spring State Machine Distributed Sample'
 	dependencies {
@@ -95,7 +95,7 @@ project('spring-statemachine-samples-zookeeper') {
 		testImplementation 'org.assertj:assertj-core'
 	}
 }
-
+*/
 project('spring-statemachine-samples-persist') {
 	description = 'Spring State Machine Persist Sample'
 	dependencies {
@@ -112,7 +112,7 @@ project('spring-statemachine-samples-persist') {
 		testImplementation 'org.assertj:assertj-core'
 	}
 }
-
+/*
 project('spring-statemachine-samples-web') {
 	description = 'Spring State Machine Web Sample'
 	dependencies {
@@ -133,7 +133,7 @@ project('spring-statemachine-samples-web') {
 		testImplementation 'org.assertj:assertj-core'
 	}
 }
-
+*/
 project('spring-statemachine-samples-scope') {
 	description = 'Spring State Machine Web Scope Sample'
 	dependencies {
@@ -162,7 +162,7 @@ project('spring-statemachine-samples-security') {
 		testImplementation 'org.assertj:assertj-core'
 	}
 }
-
+/*
 project('spring-statemachine-samples-eventservice') {
 	description = 'Spring State Machine Event Service Sample'
 	dependencies {
@@ -180,7 +180,7 @@ project('spring-statemachine-samples-eventservice') {
 		testImplementation 'org.hamcrest:hamcrest:2.2'
 	}
 }
-
+*/
 project('spring-statemachine-samples-deploy') {
 	description = 'Spring State Machine Deploy Sample'
 	dependencies {
@@ -249,7 +249,7 @@ project('spring-statemachine-samples-datajpamultipersist') {
 		testImplementation 'org.hamcrest:hamcrest:2.2'
 	}
 }
-
+/*
 project('spring-statemachine-samples-datapersist') {
 	description = 'Spring State Machine Data Persist Sample'
 	dependencies {
@@ -272,7 +272,7 @@ project('spring-statemachine-samples-datapersist') {
 		testImplementation 'org.hamcrest:hamcrest:2.2'
 	}
 }
-
+*/
 project('spring-statemachine-samples-monitoring') {
 	description = 'Spring State Machine Monitoring Sample'
 	dependencies {
@@ -284,6 +284,7 @@ project('spring-statemachine-samples-monitoring') {
 		implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
 		testImplementation('com.jayway.jsonpath:json-path')
 		testImplementation('com.jayway.jsonpath:json-path-assert')
+		testImplementation('com.h2database:h2')
 		testImplementation project(path:':spring-statemachine-core', configuration:'testArtifacts')
 		testImplementation 'io.projectreactor:reactor-test'
 	}

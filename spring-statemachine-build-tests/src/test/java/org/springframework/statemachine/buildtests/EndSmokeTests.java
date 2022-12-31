@@ -17,6 +17,7 @@ package org.springframework.statemachine.buildtests;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -34,6 +35,7 @@ import org.springframework.statemachine.uml.UmlStateMachineModelFactory;
 public class EndSmokeTests extends AbstractBuildTests {
 
 	@Test
+	@Disabled
 	@SuppressWarnings("unchecked")
 	public void testEndState() throws Exception {
 		context.register(Config1.class);
